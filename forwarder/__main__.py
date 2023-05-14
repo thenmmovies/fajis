@@ -9,17 +9,11 @@ from forwarder.modules import ALL_MODULES
 
 PM_START_TEXT = """
 Hey {}, I'm {}!
-I'm a bot used to forward messages from one chat to another.
-
-To obtain a list of commands, use /help.
+I'm a bot used to boost channel views, made by @nmfajis.
 """
 
 PM_HELP_TEXT = """
-Here is a list of usable commands:
- - /start : Starts the bot.
- - /help : Sends you this help message.
-
-just send /id in private chat/group/channel and i will reply it's id.
+for help contact @nmfajis
 """
 
 for module in ALL_MODULES:
@@ -45,7 +39,7 @@ def help(update: Update, _):
     message = update.effective_message
 
     if not chat.type == "private":
-        message.reply_text("Contact me via PM to get a list of usable commands.")
+        message.reply_text("Contact me via PM .")
     else:
         message.reply_text(PM_HELP_TEXT)
 
